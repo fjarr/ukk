@@ -1,25 +1,25 @@
 <template>
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../assets/1.pNg" alt="" style="width: 100%"/>
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/4.jpg" alt="" style="width: 100%" />
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/3.jpg" alt="" style="width: 100%" />
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/1.pNg" alt="" style="width: 100%" />
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/4.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/3.jpg" alt="" style="width: 100%" />
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
   <div class="container-fluid">
     <div class="berita">
@@ -32,7 +32,7 @@
           <div v-for="(foto, i) in berita" :key="i" class="col-6 col-md-3 p-3">
             <nuxt-link :to="`/${foto.id}`">
               <div class="card" style="height: 100%;">
-                <img :src="foto.foto" class="img-fluid " alt="" style="height:200px;" />
+                <img :src="foto.foto" class="img-fluid " alt=""  />
                 <hr>
                 <p class="judul-berita p-2">{{ foto.judul }}</p>
               </div>
@@ -134,48 +134,112 @@
       </div>
     </div>
   </div>
-    <div class="judul ">
-      <h4 class="text-center text-primary ">PROGRAM KEAHLIAN</h4>
-      <h6 class="text-secondary text-center ">
+  <div class="vidio pb-5 m-5">
+  <h5 class="text-primary text-center">VIDIO YOUTUBE</h5>
+  <h6 class="text-secondary text-center pb-3 mb-3">SMKN 4 TASIKMALAYA</h6>
+  <div class="video-wrapper">
+    <iframe class="rounded-5" 
+      src="https://www.youtube.com/embed/5l2u9rHS36k?si=eTP0ycO7TOGcanOH&autoplay=1" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  
+  <div class="row text-center d-flex justify-content-center pt-3">
+    <div class="col-4">
+      <p>BULAN BAHASA DAN SASTRA SMK 4</p><hr>
+        <iframe class="rounded-5"  width="100%"
+          src="https://www.youtube.com/embed/E6tbR0ly5jA?si=YyiYKbQ6cN_L_Be6" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="col-4">
+      
+        <iframe class="rounded-5"  width="100%"
+          src="https://www.youtube.com/embed/_BUlBVhb4Bk?si=Q1XnjdS0FH8D7_Re" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><hr>
+          <p>VIDIO MODERASI BERAGAMA/TOLERANSI</p>
+    </div>
+    <div class="col-4">
+      <p>VIDIO PROGRAM SMK PK 2024</p><hr>
+        <iframe class="rounded-5"  width="100%"
+          src="https://www.youtube.com/embed/iBtaSZEneMQ?si=_VK_RgG-WgfWDpxv" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+  <div class="judul mt-5">
+    <h4 class="text-center text-primary ">PROGRAM KEAHLIAN</h4>
+    <h6 class="text-secondary text-center ">
+      SMKN 4 TASIKMALAYA
+    </h6>
+  </div>
+  <div class="jurusan pt-5 ">
+    <img src="../assets/jurusan.png" style="width: 100%;" alt="">
+    <div class="detil py-5 d-flex justify-content-center">
+      <nuxt-link to="/jurusan">
+        <button type="button" class="btn mx-5 text-light" style="width:60vw; background-color: rgb(52, 88, 197);">INFO
+          DETAIL</button>
+      </nuxt-link>
+    </div>
+  </div>
+  <div class="patner mt-3">
+    <div class="judul-patner">
+      <h4 class="text-center text-primary">MITRA INDUSTRI</h4>
+      <h6 class="text-secondary text-center">
         SMKN 4 TASIKMALAYA
       </h6>
     </div>
-    <div class="jurusan mt-5">
-      <img src="../assets/jurusan.png"style="width: 100%;" alt="">
-    </div>
-    <div class="patner mt-3">
-      <div class="judul-patner">
-        <h4 class="text-center text-primary">MITRA INDUSTRI</h4>
-        <h6 class="text-secondary text-center">
-          SMKN 4 TASIKMALAYA
-        </h6>
-      </div>
-      <div class="scroll-container mt-3">
-        <div class="scroll-content">
-          <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
-          <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
-        </div>
+    <div class="scroll-container mt-3">
+      <div class="scroll-content">
+        <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/agate.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/ahm.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/inovindo.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/semesta.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/skyline.png" alt=""></div>
+        <div class="img p-5"><img src="../assets/perusahaan/cikara.png" alt=""></div>
       </div>
     </div>
-  
+  </div>
+
 </template>
 <style scoped>
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    align-content: center;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height:80%;
+  }
+.berita-scroll img{
+  height:200px;
+}
 .content .col-6:hover {
   transform: scale(1.1);
 }
@@ -221,6 +285,9 @@
 }
 
 @media (max-width: 768px) {
+.berita-scroll img{
+ height: 70px;
+}
   .scroll-container {
     overflow: hidden;
     white-space: nowrap;
@@ -270,7 +337,7 @@ const getBerita = async () => {
     .from('berita')
     .select('*')
   if (error) {
-    console.error( error)
+    console.error(error)
   } else {
     berita.value = data
   }
